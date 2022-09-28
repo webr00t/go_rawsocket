@@ -100,6 +100,7 @@ func IsAlive(ipbytes [4]byte, port int, orj string) {
 	packetcsum := icmppacket[2:4]
 	CalculatePacketCsum(icmppacket, &packetcsum)
 	sendICMPPacketTo(fd, destAddr, append(icmppacket, 0x0, 0x0))
+	time.Sleep(1 * time.Second)
 	if receiveICMPPacketFrom(fd, destAddr) {
 		fmt.Printf("%s:%d\n", orj, port)
 	}
