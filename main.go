@@ -5,7 +5,7 @@ import (
 	"net"
 	"os"
 	"regexp"
-	"ryabuhin/socketraw/icmpservice"
+	"github.com/webr00t/go_rawsocket/icmpservice"
 	"strconv"
 	"strings"
 )
