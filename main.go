@@ -15,7 +15,7 @@ func main() {
 	switch os.Args[1] {
 	case "--isalive":
 		{
-			icmpservice.IsAlive(parseIP(os.Args[2]), port, os.Args[2])
+			icmpservice.IsAlive(parseIP(os.Args[2]), os.Args[3], os.Args[2])
 		}
 	case "--traceroute":
 		{
